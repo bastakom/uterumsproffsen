@@ -71,7 +71,7 @@ export const Navigation = ({ props }: HeaderProps) => {
                 }}
 
                 className={`${router.slug === item.link.cached_url && "active"
-                  }  px-5 py-2 ${item.bg_active && "button-hover bg-[#51b688] text-white rounded-full"}`}
+                  }  px-5 py-2 ${item.bg_active && "button-hover bg-white text-black hover:text-white hover:bg-black rounded-full"}`}
 
               >
                 {item.title}
