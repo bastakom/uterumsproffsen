@@ -40,8 +40,9 @@ export const Navigation = ({ props }: HeaderProps) => {
     <nav
       className={`fixed w-full items-center flex justify-between top-0 px-5 lg:px-14 py-4 z-30`}
       style={{
-        background: `${props.transparent ? "transparent" : props.header_bg_color.color
-          }`,
+        background: `${
+          props.transparent ? "transparent" : props.header_bg_color.color
+        }`,
       }}
     >
       <Link href="/">
@@ -69,10 +70,9 @@ export const Navigation = ({ props }: HeaderProps) => {
                         ? "text-white"
                         : props.header_text_color.color,
                 }}
-
-                className={`${router.slug === item.link.cached_url && "active"
-                  }  px-5 py-2 ${item.bg_active && "button-hover bg-white text-black hover:text-white hover:bg-black rounded-full"}`}
-
+                className={`${
+                  router.slug === item.link.cached_url && "active"
+                }  px-5 py-2 text-[20px] ${item.bg_active && "button-hover bg-white text-black hover:text-white hover:bg-black rounded-full text-[20px]"}`}
               >
                 {item.title}
               </Link>
@@ -82,18 +82,19 @@ export const Navigation = ({ props }: HeaderProps) => {
       </div>
 
       <div className="block lg:hidden">
-        <Hamburger toggled={open} toggle={setMenuOpen} />
+        <Hamburger toggled={open} toggle={setMenuOpen} color="white" />
       </div>
       <div
-        className={`gap-2 fixed top-0 h-full w-full mt-20 px-10 py-14 left-0 flex-col flex text-[32px] z-50 transition-all duration-300 right-0 ${!open ? "translate-x-full" : "translate-x-0"
-          }`}
+        className={`gap-2 fixed top-0 h-full w-full mt-20 px-10 py-14 left-0 flex-col flex text-[32px] z-50 transition-all duration-300 right-0 ${
+          !open ? "translate-x-full" : "translate-x-0"
+        }`}
         style={{ background: `${props.header_bg_color.color}` }}
       >
         {props.meny.map((item: LinkTypes) => (
           <Link
             onClick={handleOpenMenu}
             key={item._uid}
-            href={item.link.url}
+            href={item.link.cached_url}
             style={{ color: props.header_text_color.color }}
           >
             {item.title}

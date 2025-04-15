@@ -35,13 +35,15 @@ export const HeroSection = ({ blok }: HeroProps) => {
       className={`h-full w-full flex flex-col justify-center mx-auto`}
     >
       <div
-        className={`relative ${blok?.video
-          ? "h-full"
-          : blok.small_hero
-            ? "h-[50vh] lg:min-h-[55vh]"
-            : "h-[80vh] lg:min-h-[90vh]"
-          } justify-center flex items-center  ${blok.frame && "container-section mt-20"
-          }`}
+        className={`relative ${
+          blok?.video
+            ? "h-full"
+            : blok.small_hero
+              ? "h-[50vh] lg:min-h-[55vh]"
+              : "h-[80vh] lg:min-h-[90vh]"
+        } justify-center flex items-center  ${
+          blok.frame && "container-section mt-20"
+        }`}
       >
         <div
           className="absolute h-full w-full opacity-30 z-10"
@@ -60,8 +62,11 @@ export const HeroSection = ({ blok }: HeroProps) => {
           >
             <h3 className="uppercase">{blok.sub_text}</h3>
             <h1
-              className={`${blok.text_center ? "lg:max-w-[80%] mx-auto" : "lg:max-w-[50%]"
-                } `}
+              className={`${
+                blok.text_center
+                  ? "lg:max-w-[80%] mx-auto lg:text-[62px] lg:leading-snug text-[30px]"
+                  : "lg:max-w-[50%]"
+              } `}
             >
               {blok.title}
             </h1>
@@ -77,7 +82,9 @@ export const HeroSection = ({ blok }: HeroProps) => {
                 key={item._uid}
                 variant={`${item.secondary_color ? "secondary" : "default"}`}
               >
-                <Link href={item.link.cached_url}>{item.title}</Link>
+                <Link href={item.link.cached_url} className="text-[20px]">
+                  {item.title}
+                </Link>
               </Button>
             ))}
           </div>

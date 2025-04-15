@@ -18,6 +18,7 @@ import { TeamSection } from "./storyblok/team-section";
 import { RecoSection } from "./storyblok/reco-section";
 import { InstagramField } from "./storyblok/instagram-field";
 import { ApplicationForm } from "./application-form";
+import { ImageBlock } from "./image-block";
 
 storyblokInit({
   components: {
@@ -38,6 +39,7 @@ storyblokInit({
     reco: RecoSection,
     instagram_block: InstagramField,
     application_form: ApplicationForm,
+    image_block: ImageBlock,
   },
 
   enableFallbackComponent: true,

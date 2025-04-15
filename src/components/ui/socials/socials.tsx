@@ -30,7 +30,7 @@ export const Socials = ({ props, color }: any) => {
           <Link
             href={`${item.link}`}
             key={item._uid}
-            className="border-[1px] border-black p-4 w-fit h-fit rounded-[50%] hover:border-[#51b688] social-links"
+            className="border-[1px] border-white p-4 w-fit h-fit rounded-[50%] hover:border-[#51b688] social-links"
           >
             <Icons size="16" />
           </Link>

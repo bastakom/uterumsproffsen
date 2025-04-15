@@ -62,7 +62,7 @@ export function ContactForm({ settings }: any) {
   return (
     <div className="container-section mx-auto">
       <Toaster closeButton={true} />
-      <h3 className="tracking-[6px] text-center uppercase font-light mt-20 text-[20px]">
+      <h3 className="text-center uppercase font-light mt-20 text-[20px] text-[#766153]">
         {settings?.content?.form_title || "Kontakta oss"}
       </h3>
       <Form {...form}>
