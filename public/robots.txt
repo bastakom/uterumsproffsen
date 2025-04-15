@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://byggsakert.se/
+Host: https://uterumsproffsen.se//
 
 # Sitemaps
-Sitemap: https://byggsakert.se/sitemap.xml
+Sitemap: https://uterumsproffsen.se/sitemap.xml
