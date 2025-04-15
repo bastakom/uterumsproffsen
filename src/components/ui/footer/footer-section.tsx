@@ -45,14 +45,18 @@ export const FooterSection = ({ props }: any) => {
           </div>
 
           <div className="flex flex-col mt-4 lg:mt-0">
-            <div className="px-4 lg:px-0 lg:w-[350px] footer-info">
+            <div className="px-4 lg:px-0 lg:w-[300px] footer-info">
               {render(props.info_text)}
             </div>
           </div>
 
           <div className="flex flex-col gap-4 items-center lg:items-end mt-10 lg:mt-0">
             {props.footer_menu.map((item: LinkTypes) => (
-              <Link key={item._uid} href={item.link.cached_url}>
+              <Link
+                key={item._uid}
+                href={item.link.cached_url}
+                className="hover:text-[#decdba]"
+              >
                 {item.title}
               </Link>
             ))}

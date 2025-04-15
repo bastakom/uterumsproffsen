@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://use.typekit.net/tns5hta.css");
 @import url("https://use.typekit.net/zej2cyi.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Quicksand:wght@300..700&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -72,7 +73,7 @@
 }
 
 $font-primary: "dupincel-variable", sans-serif;
-$font-secondary: "Karla", sans-serif;
+$font-secondary: "din-2014-narrow", sans-serif;
 
 a,
 h2,
