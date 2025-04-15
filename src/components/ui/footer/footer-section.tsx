@@ -9,25 +9,25 @@ import { Socials } from "../socials/socials";
 export const FooterSection = ({ props }: any) => {
   return (
     <footer style={{ background: `${props.bg_footer?.color}` }}>
-      <div className=" flex justify-center lg:block lg:w-[75%] lg:mx-auto pt-20">
-        <Image
-          src={props.logo.filename}
-          alt={props.site_title}
-          width={250}
-          height={150}
-          className="lg:-mt-4"
-        />
-      </div>
       <div
         className={`flex justify-center mx-auto text-center lg:text-left pb-10 lg:pb-10  pt-4 relative ${
           props.footer_full_width ? "w-full" : "container-section"
         }`}
         style={{ background: `${props.bg_footer?.color}` }}
       >
-        <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-4 gap-0 lg:gap-10 w-full lg:w-[75%] lg:mx-auto lg:pt-10 text-white">
+        <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-4 gap-0 lg:gap-10 w-full lg:w-[80%] lg:mx-auto lg:pt-10 text-white">
           <div>
             <div className="flex flex-col gap-5 mt-10 lg:mt-0">
-              <span className="render-content">{render(props.adress)}</span>
+              <Image
+                src={props.logo.filename}
+                alt={props.site_title}
+                width={200}
+                height={150}
+                className="lg:-mt-4"
+              />
+              <span className="render-content lg:mt-7">
+                {render(props.adress)}
+              </span>
               <div className="flex flex-col">
                 <Link href={`mailto:${props.mail}`}>{props.mail}</Link>
                 <Link href={`tel:${props.phone}`}>{props.phone}</Link>
@@ -45,7 +45,9 @@ export const FooterSection = ({ props }: any) => {
           </div>
 
           <div className="flex flex-col mt-4 lg:mt-0">
-            <div className="px-4 lg:px-0">{render(props.info_text)}</div>
+            <div className="px-4 lg:px-0 lg:w-[350px] footer-info">
+              {render(props.info_text)}
+            </div>
           </div>
 
           <div className="flex flex-col gap-4 items-center lg:items-end mt-10 lg:mt-0">
