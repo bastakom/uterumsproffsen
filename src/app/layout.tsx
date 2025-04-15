@@ -75,7 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           <script
             id="Cookiebot"
             src="https://consent.cookiebot.com/uc.js"
-            data-cbid="140420ae-22ac-4fd6-becd-d85f47141caa"
+            data-cbid="f0b408f9-fc36-4ef5-8a70-d0b6aad1b45f"
             data-blockingmode="manual"
             type="text/javascript"
             async

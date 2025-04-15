@@ -10,7 +10,7 @@ const CookieConsent = () => {
       script.type = "text/javascript";
       script.async = true;
       script.src =
-        "https://consent.cookiebot.com/140420ae-22ac-4fd6-becd-d85f47141caa/cd.js";
+        "https://consent.cookiebot.com/f0b408f9-fc36-4ef5-8a70-d0b6aad1b45f/cd.js";
 
       cookieBotWrapper.appendChild(script);
     }
