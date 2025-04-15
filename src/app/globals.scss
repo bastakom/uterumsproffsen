@@ -129,7 +129,18 @@ a {
 
 .render-content {
   p {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.footer-info {
+  p,
+  br {
+    font-size: 16px;
+    a {
+      font-size: 16px;
+    }
   }
 }
 
