@@ -71,7 +71,7 @@ export const HeroSection = ({ blok }: HeroProps) => {
               {blok.title}
             </h1>
             {blok.content && (
-              <span className="mx-auto hidden lg:block text-[22px] lg:max-w-[50%]">
+              <span className="mx-auto  text-[22px] lg:max-w-[50%]">
                 {blok.content}
               </span>
             )}
