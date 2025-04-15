@@ -82,7 +82,7 @@ export const HeroSection = ({ blok }: HeroProps) => {
                 key={item._uid}
                 variant={`${item.secondary_color ? "secondary" : "default"}`}
               >
-                <Link href={item.link.cached_url} className="text-[20px]">
+                <Link href={item.link.cached_url} className="text-[16px]">
                   {item.title}
                 </Link>
               </Button>
