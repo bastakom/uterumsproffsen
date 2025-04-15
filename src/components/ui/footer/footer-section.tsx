@@ -19,11 +19,12 @@ export const FooterSection = ({ props }: any) => {
         />
       </div>
       <div
-        className={`flex justify-center mx-auto text-center lg:text-left pb-10 lg:pb-10  pt-4 relative ${props.footer_full_width ? "w-full" : "container-section"
-          }`}
+        className={`flex justify-center mx-auto text-center lg:text-left pb-10 lg:pb-10  pt-4 relative ${
+          props.footer_full_width ? "w-full" : "container-section"
+        }`}
         style={{ background: `${props.bg_footer?.color}` }}
       >
-        <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-4 gap-0 lg:gap-10 w-full lg:w-[75%] lg:mx-auto lg:pt-10 ">
+        <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-4 gap-0 lg:gap-10 w-full lg:w-[75%] lg:mx-auto lg:pt-10 text-white">
           <div>
             <div className="flex flex-col gap-5 mt-10 lg:mt-0">
               <span className="render-content">{render(props.adress)}</span>
@@ -32,7 +33,7 @@ export const FooterSection = ({ props }: any) => {
                 <Link href={`tel:${props.phone}`}>{props.phone}</Link>
               </div>
             </div>
-            {props.footer_logo.filename &&
+            {props.footer_logo.filename && (
               <Image
                 src={props.footer_logo.filename}
                 alt={props.footer_logo.alt}
@@ -40,11 +41,11 @@ export const FooterSection = ({ props }: any) => {
                 height={150}
                 className=""
               />
-            }
+            )}
           </div>
 
           <div className="flex flex-col mt-4 lg:mt-0">
-            <div>{render(props.info_text)}</div>
+            <div className="px-4 lg:px-0">{render(props.info_text)}</div>
           </div>
 
           <div className="flex flex-col gap-4 items-center lg:items-end mt-10 lg:mt-0">

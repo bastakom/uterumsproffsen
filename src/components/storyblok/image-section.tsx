@@ -7,11 +7,11 @@ import { Button } from "../ui/button";
 
 export const ImageSection = ({ blok }: any) => {
   return (
-    <div className="w-full "
+    <div
+      className="w-full "
       {...storyblokEditable}
       style={{ background: `${blok.bg_color?.color || ""}` }}
     >
-
       <div
         className={`container-section  ${blok.bg_color?.color && "px-0 pt-5 lg:p-14"}`}
         style={{ background: `${blok.bg_color?.color || ""}` }}
@@ -28,12 +28,17 @@ export const ImageSection = ({ blok }: any) => {
             />
           </div>
           <div
-            className={`flex flex-col gap-5 lg:max-w-[95%] xl:max-w-[85%] justify-center ${blok.text_white && "text-white"
-              }`}
+            className={`flex flex-col gap-5 lg:max-w-[95%] xl:max-w-[85%] justify-center ${
+              blok.text_white && "text-white"
+            }`}
           >
             {blok.sub_title && <h3>{blok.sub_title}</h3>}
             {blok.title && <h2>{blok.title}</h2>}
-            {blok.content && <span className="flex flex-col gap-5">{render(blok.content)}</span>}
+            {blok.content && (
+              <span className="flex flex-col gap-5 contact-section">
+                {render(blok.content)}
+              </span>
+            )}
             <div>
               {blok.buttons.map((item: LinkTypes) => (
                 <Button

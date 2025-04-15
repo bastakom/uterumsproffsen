@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://use.typekit.net/zej2cyi.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Quicksand:wght@300..700&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 @layer base {
   :root {
@@ -69,7 +71,7 @@
   }
 }
 
-$font-primary: "Gabarito", sans-serif;
+$font-primary: "dupincel-variable", sans-serif;
 $font-secondary: "Karla", sans-serif;
 
 a,
@@ -86,12 +88,39 @@ span {
   font-family: $font-secondary;
 }
 
+a {
+  font-size: 20px;
+}
+
 .container-section {
   width: 85%;
   margin-right: auto;
   margin-left: auto;
 }
 
+.columns-block {
+  span {
+    p {
+      font-size: 20px;
+      a {
+        font-size: 20px;
+        u {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.contact-section {
+  p {
+    font-size: 20px;
+    b,
+    a {
+      font-size: 20px;
+    }
+  }
+}
 /* Global text settings */
 
 .p-container {
