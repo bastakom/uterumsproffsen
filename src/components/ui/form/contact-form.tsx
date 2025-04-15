@@ -117,7 +117,7 @@ export function ContactForm({ settings }: any) {
               <FormItem>
                 <FormControl>
                   <div className="flex flex-col gap-2 py-10">
-                    <label className="flex items-center space-x-2">
+                    <label className="flex items-center space-x-2 text-[20px]">
                       <input
                         type="radio"
                         value="privat"
@@ -127,7 +127,7 @@ export function ContactForm({ settings }: any) {
                       />
                       <span className="font-medium">Privat</span>
                     </label>
-                    <label className="flex items-center space-x-2">
+                    <label className="flex items-center space-x-2 text-[20px]">
                       <input
                         type="radio"
                         value="foretag"
@@ -137,7 +137,7 @@ export function ContactForm({ settings }: any) {
                       />
                       <span className="font-medium">Företag</span>
                     </label>
-                    <label className="flex items-center space-x-2">
+                    <label className="flex items-center space-x-2 text-[20px]">
                       <input
                         type="radio"
                         value="brf"
