@@ -24,7 +24,7 @@ export const ImageBlock = ({ blok }: any) => {
         <div
           className={`
             relative lg:hidden mx-auto 
-            ${blok.big_image ? "-mt-20 w-[350px] h-[400px]" : "-mt-10 -mb-10 w-[350px] h-[400px]"}
+            ${blok.big_image ? "-mt-20 w-[350px] h-[400px] mb-10" : "-mt-10 -mb-10 w-[350px] h-[400px]"}
           `}
         >
           <Image

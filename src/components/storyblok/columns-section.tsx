@@ -24,7 +24,7 @@ export const Columns = ({ blok }: any) => {
             key={item._uid}
           >
             {item.title_karla_font && (
-              <h2 className="text-[20px]  uppercase mb-8 text-[#766153] font-medium">
+              <h2 className="text-[20px]  uppercase lg:mb-8 text-[#766153] font-medium">
                 {item.title_karla_font}
               </h2>
             )}
