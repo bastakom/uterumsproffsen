@@ -24,6 +24,7 @@ interface HeaderProps {
     };
     transparent: boolean;
     fields: any;
+    mobile_logo: any;
   };
 }
 
@@ -70,7 +71,7 @@ export const Navigation = ({ props }: HeaderProps) => {
                         ? "text-white"
                         : props.header_text_color.color,
                 }}
-                className={`${
+                className={` custom-hover-text ${
                   router.slug === item.link.cached_url && "active "
                 }  px-5 py-2 text-[20px] ${item.bg_active && "button-hover bg-white text-black hover:text-white hover:bg-black rounded-md text-[20px] "}`}
               >
@@ -85,21 +86,32 @@ export const Navigation = ({ props }: HeaderProps) => {
         <Hamburger toggled={open} toggle={setMenuOpen} color="white" />
       </div>
       <div
-        className={`gap-2 fixed top-0 h-full w-full mt-20 px-10 py-14 left-0 flex-col flex text-[32px] z-50 transition-all duration-300 right-0 ${
+        className={`gap-2 fixed top-0 h-full w-full mt-20 px-10 py-14 left-0 flex-col flex text-[32px] z-50 transition-all items-center  duration-300 right-0 overflow-y-hidden ${
           !open ? "translate-x-full" : "translate-x-0"
         }`}
         style={{ background: `${props.header_bg_color.color}` }}
       >
-        {props.meny.map((item: LinkTypes) => (
-          <Link
-            onClick={handleOpenMenu}
-            key={item._uid}
-            href={item.link.cached_url}
-            style={{ color: props.header_text_color.color }}
-          >
-            {item.title}
-          </Link>
-        ))}
+        <div className="mt-10 flex flex-col gap-4">
+          {props.meny.map((item: LinkTypes) => (
+            <Link
+              onClick={handleOpenMenu}
+              key={item._uid}
+              href={item.link.cached_url}
+              className="text-[20px]"
+              style={{ color: props.header_text_color.color }}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
+        <div className="relative top-[170px] left-40 w-[200px] h-[204px]">
+          <Image
+            src={props?.mobile_logo?.filename || ""}
+            fill
+            className="object-contain"
+            alt={props?.mobile_logo?.alt}
+          />
+        </div>
       </div>
     </nav>
   );
